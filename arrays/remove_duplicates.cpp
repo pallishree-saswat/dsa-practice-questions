@@ -1,18 +1,19 @@
-//remove duplicates from an array
+//remove duplicates element in an sorted array 
 
 #include <iostream>
 using namespace std;
 
-int remove(int a[], int n)
+
+
+int removeDuplicates(int a[], int n)
 {
 	if(n ==1 or n==0)
 	{
 		return n;
-		
 	}
-
 	
-	int j=0;
+	// it will store the index of unique element
+	int j =0;
 	
 	for(int i=0; i<n; i++)
 	{
@@ -22,32 +23,32 @@ int remove(int a[], int n)
 		}
 	}
 	
-
-
-return j;	
-
+	return j;
+	
 }
-
 
 
 int main()
 {
-	int n = 10;
-	int a[n];
-	for(int i=0; i<n; i++)
-	{
-		cin>>a[i];
-	}
 	
-	n = remove(a,n);
-	
+int n;
+cin>>n;
+
+int a[n];
+
 for(int i=0; i<n; i++)
 {
-	cout<<a[i];
+	cin>>a[i];
 }
-	
+
+ n = removeDuplicates(a,n);
+
+
+for(int i=0; i<n; i++)
+{
+	cout<<a[i]<<", ";
+}
 
 	
-	
-	return 0;
+return 0;
 }
